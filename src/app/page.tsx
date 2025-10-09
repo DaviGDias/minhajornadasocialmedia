@@ -239,20 +239,20 @@ export default function Home() {
     {/* Texto */}
     <div className="flex-1 flex flex-col gap-6 text-center md:text-left">
       <h2 className="text-3xl sm:text-4xl font-bold text-[#b26a26]">
-        Ariane
+        Ariane Braz
       </h2>
       <p className="text-lg leading-relaxed text-[#4a2a12]">
         Desde pequena, Ariane sempre foi comunicativa e encontrou na fala e na arte
         a sua forma mais genuína de se expressar. Pintava telas, criava bijuterias para vender,
         comercializava produtos de revistas… sempre descobrindo um jeito criativo de empreender.
         Curiosamente, ela nasceu no Dia do Empreendedorismo Feminino, como se já estivesse destinada
-        a trilhar esse caminho de  <span className="font-semibold text-[#b26a26]"> inovação</span> e <span className="font-semibold text-[#b26a26]">liderança.</span> 
+        a trilhar esse caminho de  <span <span className="font-semibold"> inovação</span> e <span <span className="font-semibold">liderança.</span> 
       </p>
       <p className="text-lg leading-relaxed text-[#4a2a12]">
         Esse espírito inventivo e determinado a acompanha até hoje. Atualmente, Ariane ajuda
         empresas e empreendedores a se posicionarem de forma estratégica e assertiva nas redes
         sociais, dominando a arte de comunicar com intenção através de textos, artes e vídeos.
-        Há 4 anos, ela fundou a <span className="font-semibold text-[#b26a26]">Socialize</span> junto com seu marido, Gabriel,
+        <span className="font-semibold text-[#b26a26]">Há 4 anos<span, ela fundou a <span className="font-semibold text-[#b26a26]">Socialize</span> junto com seu marido, Gabriel,
         e desde então já contribuiu para que <span className="font-semibold text-[#b26a26]">dezenas de negócios</span> se destacassem online,
         transformando ideias em resultados concretos.
       </p>
