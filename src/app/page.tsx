@@ -258,7 +258,7 @@ export default function Home() {
       </p>
     </div>
     {/* Imagem */}
-    <div className="flex-1 flex items-center justify-center">
+    <div className="flex-1 flex items-center justify-center ">
       <img
         src="/Ari.png"
         alt="Ariane - Fundadora da Socialize"
