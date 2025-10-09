@@ -53,10 +53,24 @@ export default function Home() {
             <p className="text-lg sm:text-2xl text-gray-800 leading-relaxed">
               Se tu já tentou de tudo e ainda não te encontrou profissionalmente,<br /> essa é a tua oportunidade!
             </p>
-            <a
+       <a
               href="https://www.sympla.com.br/evento/minha-jornada-social-media/3160774"
               target="_blank"
-              className="inline-block px-10 py-4 bg-[#b26a26] text-white font-semibold rounded-full text-lg shadow-lg hover:bg-orange-800 hover:scale-105 transition-all duration-300 w-full md:w-auto text-center"
+              className="
+    inline-block
+    px-10 py-4 
+    bg-[#b26a26] 
+    text-white 
+    font-semibold 
+    rounded-full 
+    text-lg 
+    shadow-lg 
+    hover:bg-orange-800 
+    hover:scale-105 
+    transition-all 
+    duration-300
+    w-100  text-center
+  "
             >
               Quero viver essa experiência ✨
             </a>
