@@ -201,9 +201,8 @@ export default function Home() {
 
             <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-[#4a2a12]">
               Tudo o que nós aprendemos com muito esforço, erros e acertos, vamos entregar pra ti
-              de forma leve, didática e aplicável.&ensp; 
-              <br className="hidden sm:block" />
-              E diferente dos cursos on-line, <span className="font-semibold text-[#b26a26]">
+              de forma leve, didática e aplicável.
+              <br className="hidden sm:block" /> E diferente dos cursos on-line, <span className="font-semibold text-[#b26a26]">
                 vai ser de perto</span>, entendendo tuas dificuldades e <span className="font-semibold text-[#b26a26]">
                 superando elas contigo!</span>
             </p>
