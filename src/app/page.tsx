@@ -136,7 +136,7 @@ export default function Home() {
               {[
                 {
                   title: "💰 Liberdade financeira",
-                  text: Tu és dona do teu negócio, decide quanto quer ganhar e ainda tem chance de escalar!",
+                  text: "Tu és dona do teu negócio, decide quanto quer ganhar e ainda tem chance de escalar!",
                 },
                 {
                   title: "⏰ Liberdade de tempo",
