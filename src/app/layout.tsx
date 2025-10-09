@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Minha Jornada Social Media",
-  description: "A Jornada Social Media é uma mentoria em grupo que vai te levar do zero a profissão de Social Media, com 8h de imerção presencial, além de encontros online pelo google meet",
+  description: "A Jornada Social Media é uma mentoria em grupo que vai te levar do zero a profissão de Social Media, com 8h de imerção presencial em Pelotas-RS, além de encontros online pelo google meet",
 };
 
 export default function RootLayout({
