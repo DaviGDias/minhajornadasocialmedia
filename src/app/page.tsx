@@ -273,7 +273,7 @@ export default function Home() {
     {/* Imagem */}
     <div className="flex-1 flex items-center justify-center" >
       <img
-        src="/sara.png"
+        src="/Sara.png"
         alt="Sara Dias - Mentora Social Media"
         className="rounded-2xl shadow-lg w-full max-w-md object-cover hover:scale-105 transition-transform duration-500 bg-white"
       />
