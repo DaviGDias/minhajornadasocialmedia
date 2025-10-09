@@ -239,7 +239,7 @@ export default function Home() {
     {/* Texto */}
     <div className="flex-1 flex flex-col gap-6 text-center md:text-left">
       <h2 className="text-3xl sm:text-4xl font-bold text-[#b26a26]">
-        Ariane Braz.
+        Ariane Braz
       </h2>
       <p className="text-lg leading-relaxed text-[#4a2a12]">
         Desde pequena, Ariane sempre foi comunicativa e encontrou na fala e na arte
