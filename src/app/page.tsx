@@ -47,8 +47,8 @@ export default function Home() {
         {/* SEÇÃO HERO */}
         <section className="w-full flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 md:px-20 py-24">
           <div className="flex-1 flex flex-col gap-6 text-center md:text-left">
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#b26a26] leading-tight">
-              Minha Jornada Social Media:<br /> do zero à profissão
+            <h1 className="text-5xl sm:text-5xl font-bold text-[#b26a26] leading-tight">
+              Minha Jornada<br className="hidden sm:block" /> Social Media: do zero à profissão
             </h1>
 
             <p className="text-lg sm:text-2xl text-gray-800 leading-relaxed">
