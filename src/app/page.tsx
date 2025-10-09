@@ -195,13 +195,13 @@ export default function Home() {
             </h2>
 
             <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-[#4a2a12]">
-              Vai ser um <span className="font-semibold text-[#b26a26]">intensivão de conteúdos práticos e valiosos</span>
-              que vão expandir a tua visão e te deixar pronta pra conquistar os teus primeiros clientes.
+              Vai ser um <span className="font-semibold text-[#b26a26]">intensivão de conteúdos práticos e valiosos </span>
+               que vão expandir a tua visão e te deixar pronta pra conquistar os teus primeiros clientes.
             </p>
 
             <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-[#4a2a12]">
               Tudo o que nós aprendemos com muito esforço, erros e acertos, vamos entregar pra ti
-              de forma leve, didática e aplicável.
+              de forma leve, didática e aplicável. 
               <br className="hidden sm:block" />
               E diferente dos cursos on-line, <span className="font-semibold text-[#b26a26]">
                 vai ser de perto</span>, entendendo tuas dificuldades e <span className="font-semibold text-[#b26a26]">
@@ -247,7 +247,7 @@ export default function Home() {
         a sua forma mais genuína de se expressar. Pintava telas, criava bijuterias para vender,
         comercializava produtos de revistas… sempre descobrindo um jeito criativo de empreender.
         Curiosamente, ela nasceu no Dia do Empreendedorismo Feminino, como se já estivesse destinada
-        a trilhar esse caminho de inovação e liderança.
+        a trilhar esse caminho de  <span className="font-semibold text-[#b26a26]"> inovação</span> e <span className="font-semibold text-[#b26a26]">liderança.</span> 
       </p>
       <p className="text-lg leading-relaxed text-[#4a2a12]">
         Esse espírito inventivo e determinado a acompanha até hoje. Atualmente, Ariane ajuda
