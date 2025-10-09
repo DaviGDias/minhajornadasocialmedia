@@ -125,7 +125,7 @@ export default function Home() {
         <section className="w-full bg-white flex flex-col items-center justify-center text-center px-6 sm:px-10 lg:px-20 py-20">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#b26a26] mb-6 leading-tight">
-              Se tu busca uma profissão que traga liberdade financeira, de tempo e geográfica,<br className="hidden sm:block" /> ser Social Media é pra ti!
+              Se tu buscas uma profissão que traga liberdade financeira, de tempo e geográfica,<br className="hidden sm:block" /> ser Social Media é pra ti!
             </h2>
 
             <p className="text-lg sm:text-xl text-gray-700 mb-12 max-w-2xl mx-auto">
@@ -136,11 +136,11 @@ export default function Home() {
               {[
                 {
                   title: "💰 Liberdade financeira",
-                  text: "Tu é dona do teu negócio, decide quanto quer ganhar e ainda tem chance de escalar!",
+                  text: Tu és dona do teu negócio, decide quanto quer ganhar e ainda tem chance de escalar!",
                 },
                 {
                   title: "⏰ Liberdade de tempo",
-                  text: "Tu faz o teu próprio horário, garantindo mais tempo com a família e pra ti mesma.",
+                  text: "Tu fazes o teu próprio horário, garantindo mais tempo com a família e pra ti mesma.",
                 },
                 {
                   title: "🌎 Liberdade geográfica",
@@ -253,7 +253,7 @@ export default function Home() {
         empresas e empreendedores a se posicionarem de forma estratégica e assertiva nas redes
         sociais, dominando a arte de comunicar com intenção através de textos, artes e vídeos.
         Há 4 anos, ela fundou a <span className="font-semibold text-[#b26a26]">Socialize</span> junto com seu marido, Gabriel,
-        e desde então já contribuiu para que dezenas de negócios se destacassem online,
+        e desde então já contribuiu para que <span className="font-semibold text-[#b26a26]">dezenas de negócios</span> se destacassem online,
         transformando ideias em resultados concretos.
       </p>
     </div>
