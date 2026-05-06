@@ -90,7 +90,7 @@ export default function Home() {
             </h2>
             <p className="text-lg sm:text-xl text-white leading-relaxed">
               Uma mentoria com <span className="font-semibold text-yellow-200">8 horas de imersão presencial</span>,
-              das <span className="font-semibold">9:00 às 12:30</span> e das <span className="font-semibold">13:30 às 18:00</span>, além de encontros online e individuais.
+              em <span className="font-semibold">dois turbos</span>, além de encontros online e individuais.
             </p>
             <p className="mt-4 text-lg sm:text-xl text-white/90">
               Criada para quem deseja algo novo, busca reconhecimento profissional
