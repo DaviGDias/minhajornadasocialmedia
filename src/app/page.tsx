@@ -45,7 +45,7 @@ export default function Home() {
             <p className="text-lg sm:text-2xl text-gray-800 leading-relaxed">
               Se tu já tentou de tudo e ainda não te encontrou profissionalmente,<br /> essa é a tua oportunidade!
             </p>
-       <a
+     {/*  <a
               href="https://www.sympla.com.br/evento/minha-jornada-social-media/3160774"
               target="_blank"
               className="
@@ -65,7 +65,7 @@ export default function Home() {
   "
             >
               Quero viver essa experiência ✨
-            </a>
+            </a>*/}
           </div>
           <div className="relative w-full max-w-md mx-auto">
             <Image
