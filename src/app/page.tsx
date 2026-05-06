@@ -33,15 +33,7 @@ export default function Home() {
   return (
     <div className="font-sans flex flex-col min-h-screen">
       {/* HEADER FIXO */}
-      <header className="fixed top-0 left-0 w-full bg-gradient-to-r from-gray-900 to-gray-800 text-white text-center py-2 shadow-md z-50 px-2">
-        <p className="text-sm sm:text-base font-semibold leading-tight">
-          ⏳ Faltam{" "}
-          <span className="font-bold">
-            {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-          </span>{" "}
-          para o grande evento! 🚀
-        </p>
-      </header>
+    
 
       <main className="mt-12 w-full flex flex-col items-center justify-center overflow-x-hidden">
         {/* SEÇÃO HERO */}
