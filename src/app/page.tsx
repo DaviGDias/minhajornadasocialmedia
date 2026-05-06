@@ -98,12 +98,12 @@ export default function Home() {
             </p>
           </div>
           <div className="relative z-10 mt-10">
-            <a
+            {/*<a
               href="https://www.sympla.com.br/evento/minha-jornada-social-media/3160774"
               className="inline-block px-10 py-4 bg-white text-[#b26a26] font-semibold rounded-full text-lg shadow-lg hover:bg-yellow-100 hover:scale-105 transition-all duration-300"
             >
               Garantir minha vaga 🚀
-            </a>
+            </a>*/}
           </div>
         </section>
 
@@ -191,12 +191,12 @@ export default function Home() {
                 superando elas contigo!</span>
             </p>
             <div className="mt-8 sm:mt-10">
-              <a
+              {/*<a
                 href="https://www.sympla.com.br/evento/minha-jornada-social-media/3160774"
                 className="inline-block px-8 sm:px-10 py-3 sm:py-4 bg-[#b26a26] text-white font-semibold rounded-full text-base sm:text-lg shadow-lg hover:bg-orange-800 hover:scale-105 transition-all duration-300"
               >
                 Quero viver essa experiência ✨
-              </a>
+              </a>*/}
             </div>
           </div>
         </section>
