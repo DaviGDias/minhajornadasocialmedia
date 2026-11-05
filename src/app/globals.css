@@ -12,15 +12,37 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #fffce7;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ── CTA Pulse Animations ────────────────────────── */
+@keyframes pulse-cta {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(178, 106, 38, 0.5); }
+  50% { box-shadow: 0 0 0 14px rgba(178, 106, 38, 0); }
+}
+
+@keyframes pulse-cta-white {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+  50% { box-shadow: 0 0 0 14px rgba(255, 255, 255, 0); }
+}
+
+.animate-pulse-cta {
+  animation: pulse-cta 2.5s ease-in-out infinite;
+}
+
+.animate-pulse-cta-white {
+  animation: pulse-cta-white 2.5s ease-in-out infinite;
+}
+
+/* ── Tabular nums for countdown ──────────────────── */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
 }
