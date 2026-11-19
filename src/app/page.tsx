@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
+import { Menu, X, Calendar, BookOpen, Users, DollarSign, HelpCircle, Info } from "lucide-react";
 
 // ── Constants ───────────────────────────────────────────────
 const SYMPLA_URL = "https://www.sympla.com.br/evento/minha-jornada-social-media/3160774";
@@ -119,6 +120,19 @@ export default function Home() {
     seconds: 0,
   });
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   // Countdown timer
   useEffect(() => {
@@ -161,20 +175,22 @@ export default function Home() {
       </div>
 
       {/* ══════════════════════════════════════════════════════
-          HEADER FIXO — sticky com CTA
+          HEADER FIXO — sticky com CTA & Menu Mobile
       ══════════════════════════════════════════════════════ */}
       <header
-        className={`fixed top-[37px] left-0 w-full z-40 transition-all duration-300 ${scrolled
+        className={`fixed top-[37px] left-0 w-full z-40 transition-all duration-300 ${scrolled || mobileMenuOpen
             ? "bg-white/95 backdrop-blur-md shadow-lg"
-            : "bg-white/70 backdrop-blur-sm"
+            : "bg-white/80 backdrop-blur-sm"
           }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-5 sm:px-6 py-3">
           <a
             href="#"
-            className="text-base sm:text-lg font-bold text-[#b26a26] tracking-tight"
+            onClick={() => setMobileMenuOpen(false)}
+            className="text-base sm:text-lg font-bold text-[#b26a26] tracking-tight flex items-center gap-1.5"
           >
-            ✨ Jornada Social Media
+            <span>✨</span>
+            <span>Jornada Social Media</span>
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-gray-600 font-medium">
             <a href="#sobre" className="hover:text-[#b26a26] transition-colors">
@@ -204,16 +220,117 @@ export default function Home() {
             >
               Investimento
             </a>
+            <a
+              href="#faq"
+              className="hover:text-[#b26a26] transition-colors"
+            >
+              FAQ
+            </a>
           </nav>
-          <a
-            href={SYMPLA_URL}
-            target="_blank"
-            className="hidden sm:inline-block px-5 py-2 bg-[#b26a26] text-white font-semibold rounded-full text-sm shadow-md hover:bg-orange-800 hover:scale-105 transition-all duration-300"
-          >
-            Inscreva-se →
-          </a>
+
+          <div className="flex items-center gap-3">
+            <a
+              href={SYMPLA_URL}
+              target="_blank"
+              className="hidden sm:inline-block px-5 py-2 bg-[#b26a26] text-white font-semibold rounded-full text-sm shadow-md hover:bg-orange-800 hover:scale-105 transition-all duration-300"
+            >
+              Inscreva-se →
+            </a>
+
+            {/* Botão Hamburger Mobile */}
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 text-gray-700 hover:text-[#b26a26] hover:bg-[#b26a26]/10 rounded-xl transition-colors focus:outline-none"
+              aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6 text-[#b26a26]" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Menu Drawer Mobile */}
+        <div
+          className={`md:hidden border-t border-[#b26a26]/10 bg-white transition-all duration-300 ease-in-out overflow-hidden shadow-2xl ${mobileMenuOpen
+              ? "max-h-[85vh] opacity-100"
+              : "max-h-0 opacity-0 pointer-events-none"
+            }`}
+        >
+          <div className="flex flex-col p-5 space-y-1.5 overflow-y-auto max-h-[calc(85vh-3rem)]">
+            <p className="text-[11px] uppercase font-bold text-gray-400 tracking-wider px-3 mb-1">
+              Menu de Navegação
+            </p>
+
+            {[
+              { href: "#sobre", label: "Sobre a Mentoria", icon: Info },
+              {
+                href: "#cronograma",
+                label: "Cronograma das Aulas",
+                icon: Calendar,
+                badge: "25/11",
+              },
+              { href: "#modulos", label: "Módulos do Curso", icon: BookOpen },
+              { href: "#mentoras", label: "Suas Mentoras", icon: Users },
+              {
+                href: "#investimento",
+                label: "Investimento & Vagas",
+                icon: DollarSign,
+                badge: "12x R$ 83",
+              },
+              { href: "#faq", label: "Perguntas Frequentes", icon: HelpCircle },
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <a
+                  key={idx}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-between px-3.5 py-3 rounded-xl text-gray-700 hover:text-[#b26a26] hover:bg-[#b26a26]/10 active:bg-[#b26a26]/15 transition-colors text-base font-medium"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#b26a26]/10 flex items-center justify-center text-[#b26a26]">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <span>{item.label}</span>
+                  </div>
+                  {item.badge && (
+                    <span className="text-[11px] font-bold text-[#b26a26] bg-[#b26a26]/15 px-2 py-0.5 rounded-full">
+                      {item.badge}
+                    </span>
+                  )}
+                </a>
+              );
+            })}
+
+            <div className="pt-3 mt-2 border-t border-gray-100 flex flex-col gap-2">
+              <a
+                href={SYMPLA_URL}
+                target="_blank"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full text-center py-3.5 px-6 bg-[#b26a26] hover:bg-orange-800 text-white font-bold rounded-full shadow-lg transition-all text-sm sm:text-base active:scale-95"
+              >
+                Garantir Minha Vaga 🚀
+              </a>
+              <p className="text-center text-[11px] text-gray-400">
+                ⏰ Inscrições encerram em 24 de Novembro!
+              </p>
+            </div>
+          </div>
         </div>
       </header>
+
+      {/* Backdrop para fechar o menu mobile ao clicar fora */}
+      {mobileMenuOpen && (
+        <div
+          onClick={() => setMobileMenuOpen(false)}
+          className="fixed inset-0 bg-black/40 backdrop-blur-xs z-30 md:hidden"
+          aria-hidden="true"
+        />
+      )}
 
       {/* ══════════════════════════════════════════════════════
           MAIN CONTENT
@@ -801,7 +918,10 @@ export default function Home() {
         </section>
 
         {/* ─────────── FAQ ─────────── */}
-        <section className="w-full bg-[#faf5ef] py-20 sm:py-24 px-6 sm:px-16">
+        <section
+          id="faq"
+          className="w-full bg-[#faf5ef] py-20 sm:py-24 px-6 sm:px-16"
+        >
           <div className="max-w-3xl mx-auto">
             <Reveal>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#b26a26] text-center mb-12">
@@ -974,7 +1094,10 @@ export default function Home() {
       {/* ══════════════════════════════════════════════════════
           MOBILE FIXED CTA BAR
       ══════════════════════════════════════════════════════ */}
-      <div className="fixed bottom-0 left-0 w-full z-50 sm:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] px-4 py-3">
+      <div
+        className={`fixed bottom-0 left-0 w-full z-50 sm:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] px-4 py-3 transition-all duration-300 ${mobileMenuOpen ? "opacity-0 pointer-events-none translate-y-full" : "opacity-100 translate-y-0"
+          }`}
+      >
         <a
           href={SYMPLA_URL}
           target="_blank"
