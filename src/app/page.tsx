@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 
 // ── Constants ───────────────────────────────────────────────
 const SYMPLA_URL = "https://www.sympla.com.br/evento/minha-jornada-social-media/3160774";
-const TARGET_DATE = new Date("2026-12-15T00:00:00").getTime();
+const TARGET_DATE = new Date("2026-11-24T23:59:59").getTime();
 
 // ── Scroll Reveal Hook ──────────────────────────────────────
 function useScrollReveal(threshold = 0.12) {
@@ -150,8 +150,7 @@ export default function Home() {
           BARRA DE URGÊNCIA — topo fixo
       ══════════════════════════════════════════════════════ */}
       <div className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-red-700 via-red-600 to-orange-600 text-white text-center py-2.5 px-4 text-xs sm:text-sm font-medium shadow-sm">
-        🔥 <span className="font-bold">Vagas limitadas!</span> Inscrições
-        abertas por tempo limitado —{" "}
+        🔥 <span className="font-bold">Inscrições até 24 de Novembro!</span> Vagas limitadas —{" "}
         <a
           href={SYMPLA_URL}
           target="_blank"
@@ -180,6 +179,12 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-6 text-sm text-gray-600 font-medium">
             <a href="#sobre" className="hover:text-[#b26a26] transition-colors">
               Sobre
+            </a>
+            <a
+              href="#cronograma"
+              className="hover:text-[#b26a26] transition-colors"
+            >
+              Cronograma
             </a>
             <a
               href="#modulos"
@@ -221,7 +226,7 @@ export default function Home() {
             <Reveal>
               <div className="inline-flex items-center gap-2 bg-[#b26a26]/10 text-[#b26a26] text-sm font-semibold px-4 py-1.5 rounded-full w-fit mx-auto md:mx-0">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                Inscrições abertas — Turma 2026
+                Inscrições até 24 de Novembro
               </div>
             </Reveal>
 
@@ -248,14 +253,14 @@ export default function Home() {
 
             <Reveal delay={300}>
               <div className="flex flex-wrap items-center gap-2.5 justify-center md:justify-start text-sm text-gray-500">
+                <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 rounded-full px-3.5 py-1.5 font-medium text-gray-700">
+                  🗓️ Aulas: 25/11, 02/12, 09/12 e 16/12
+                </span>
                 <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 rounded-full px-3.5 py-1.5">
-                  📹 4 encontros ao vivo
+                  📹 4 encontros 100% ao vivo
                 </span>
                 <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 rounded-full px-3.5 py-1.5">
                   📋 10 módulos completos
-                </span>
-                <span className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 rounded-full px-3.5 py-1.5">
-                  🏆 +5 anos de experiência
                 </span>
               </div>
             </Reveal>
@@ -298,9 +303,14 @@ export default function Home() {
         {/* ─────────── COUNTDOWN BANNER ─────────── */}
         <section className="w-full bg-gradient-to-r from-[#7a4418] via-[#b26a26] to-[#d48d3e] py-7 px-6">
           <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
-            <p className="text-white font-semibold text-base sm:text-lg text-center sm:text-left">
-              ⏰ Inscrições encerram em:
-            </p>
+            <div className="text-center sm:text-left">
+              <p className="text-white font-bold text-base sm:text-lg">
+                ⏰ Inscrições até 24 de Novembro!
+              </p>
+              <p className="text-white/80 text-xs sm:text-sm">
+                Aulas nos dias 25/11, 02/12, 09/12 e 16/12
+              </p>
+            </div>
             <div className="flex items-center gap-2 sm:gap-3">
               <CountdownUnit value={timeLeft.days} label="Dias" />
               <span className="text-xl sm:text-3xl text-white/40 font-light -mt-4">
@@ -370,6 +380,92 @@ export default function Home() {
                 >
                   Garantir minha vaga 🚀
                 </a>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ─────────── SEÇÃO CRONOGRAMA DAS AULAS ─────────── */}
+        <section
+          id="cronograma"
+          className="w-full bg-[#faf5ef] py-20 sm:py-24 px-6 sm:px-16"
+        >
+          <div className="max-w-5xl mx-auto flex flex-col items-center">
+            <Reveal>
+              <div className="inline-flex items-center gap-2 bg-[#b26a26]/10 text-[#b26a26] text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+                🗓️ Datas Confirmadas
+              </div>
+            </Reveal>
+            <Reveal delay={100}>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#b26a26] text-center mb-4">
+                Cronograma dos Encontros Ao Vivo
+              </h2>
+            </Reveal>
+            <Reveal delay={200}>
+              <p className="text-lg sm:text-xl text-gray-600 text-center max-w-2xl mb-12">
+                Quatro noites de imersão direta e prática 100% ao vivo. Anote na sua agenda:
+              </p>
+            </Reveal>
+
+            {/* Grid dos 4 encontros */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full mb-10">
+              {[
+                {
+                  aula: "Encontro 1",
+                  data: "25 de Novembro",
+                  dia: "Quarta-feira",
+                  destaque: "Início da Mentoria",
+                },
+                {
+                  aula: "Encontro 2",
+                  data: "02 de Dezembro",
+                  dia: "Quarta-feira",
+                  destaque: "Estratégia & Criação",
+                },
+                {
+                  aula: "Encontro 3",
+                  data: "09 de Dezembro",
+                  dia: "Quarta-feira",
+                  destaque: "Tráfego & Métricas",
+                },
+                {
+                  aula: "Encontro 4",
+                  data: "16 de Dezembro",
+                  dia: "Quarta-feira",
+                  destaque: "Prospecção & Prática",
+                },
+              ].map((item, i) => (
+                <Reveal key={i} delay={i * 100}>
+                  <div className="bg-white rounded-2xl p-6 border border-[#b26a26]/15 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center flex flex-col items-center h-full">
+                    <span className="text-xs uppercase tracking-wider font-bold text-[#b26a26] bg-[#b26a26]/10 px-3 py-1 rounded-full mb-3">
+                      {item.aula}
+                    </span>
+                    <p className="text-xl font-extrabold text-[#4a2a12] mb-1">
+                      {item.data}
+                    </p>
+                    <p className="text-sm font-medium text-gray-500 mb-3">
+                      {item.dia}
+                    </p>
+                    <span className="text-xs text-[#b26a26] font-semibold bg-orange-50 px-2.5 py-1 rounded-md border border-orange-200/50 mt-auto">
+                      {item.destaque}
+                    </span>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+
+            {/* Alerta de encerramento das inscrições */}
+            <Reveal delay={400} className="w-full max-w-2xl">
+              <div className="bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 border-2 border-red-500/30 rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left shadow-sm">
+                <span className="text-4xl flex-shrink-0">⚠️</span>
+                <div>
+                  <h3 className="text-lg font-bold text-red-700">
+                    Prazo Final: Inscrições encerram em 24 de Novembro!
+                  </h3>
+                  <p className="text-sm text-gray-700 mt-1">
+                    As inscrições encerram impreterivelmente na véspera do primeiro encontro. Garanta sua vaga com antecedência para receber todos os links de acesso e materiais.
+                  </p>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -715,9 +811,13 @@ export default function Home() {
             <Reveal delay={100}>
               <div className="bg-white rounded-2xl shadow-md p-6 sm:p-8 border border-[#b26a26]/10">
                 <FAQItem
+                  question="Quais são as datas das aulas ao vivo?"
+                  answer="Os 4 encontros 100% ao vivo acontecerão nos dias 25 de Novembro, 02 de Dezembro, 09 de Dezembro e 16 de Dezembro (todas às quartas-feiras). As inscrições encerram no dia 24 de Novembro!"
+                  defaultOpen
+                />
+                <FAQItem
                   question="Preciso ter experiência com redes sociais?"
                   answer="Não! A mentoria foi criada justamente para quem está começando do zero. Vamos te guiar passo a passo, desde os fundamentos até a prática."
-                  defaultOpen
                 />
                 <FAQItem
                   question="As aulas são gravadas ou ao vivo?"
@@ -768,7 +868,8 @@ export default function Home() {
                 {/* O que está incluso */}
                 <ul className="text-left space-y-3 w-full mb-4">
                   {[
-                    "4 encontros 100% ao vivo",
+                    "4 encontros 100% ao vivo (25/11, 02/12, 09/12 e 16/12)",
+                    "Prazo de inscrição até 24 de Novembro",
                     "10 módulos de conteúdo prático",
                     "Acompanhamento personalizado",
                     "Grupo exclusivo de alunos",
