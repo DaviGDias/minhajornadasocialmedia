@@ -559,9 +559,6 @@ export default function Home() {
                     <p className="text-sm font-medium text-gray-500 mb-3">
                       {item.dia}
                     </p>
-                    <span className="text-xs text-[#b26a26] font-semibold bg-orange-50 px-2.5 py-1 rounded-md border border-orange-200/50 mt-auto">
-
-                    </span>
                   </div>
                 </Reveal>
               ))}
