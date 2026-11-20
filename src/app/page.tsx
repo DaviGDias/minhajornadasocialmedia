@@ -161,10 +161,10 @@ export default function Home() {
   return (
     <div className="font-sans flex flex-col min-h-screen bg-white">
       {/* ══════════════════════════════════════════════════════
-          BARRA DE URGÊNCIA — topo fixo
+          BARRA DE URGÊNCIA: topo fixo
       ══════════════════════════════════════════════════════ */}
       <div className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-red-700 via-red-600 to-orange-600 text-white text-center py-2.5 px-4 text-xs sm:text-sm font-medium shadow-sm">
-        🔥 <span className="font-bold">Inscrições até 24 de Novembro!</span> Vagas limitadas —{" "}
+        🔥 <span className="font-bold">Inscrições até 24 de Novembro!</span> Vagas limitadas:{" "}
         <a
           href={SYMPLA_URL}
           target="_blank"
@@ -175,12 +175,12 @@ export default function Home() {
       </div>
 
       {/* ══════════════════════════════════════════════════════
-          HEADER FIXO — sticky com CTA & Menu Mobile
+          HEADER FIXO: sticky com CTA & Menu Mobile
       ══════════════════════════════════════════════════════ */}
       <header
         className={`fixed top-[37px] left-0 w-full z-40 transition-all duration-300 ${scrolled || mobileMenuOpen
-            ? "bg-white/95 backdrop-blur-md shadow-lg"
-            : "bg-white/80 backdrop-blur-sm"
+          ? "bg-white/95 backdrop-blur-md shadow-lg"
+          : "bg-white/80 backdrop-blur-sm"
           }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-5 sm:px-6 py-3">
@@ -256,8 +256,8 @@ export default function Home() {
         {/* Menu Drawer Mobile */}
         <div
           className={`md:hidden border-t border-[#b26a26]/10 bg-white transition-all duration-300 ease-in-out overflow-hidden shadow-2xl ${mobileMenuOpen
-              ? "max-h-[85vh] opacity-100"
-              : "max-h-0 opacity-0 pointer-events-none"
+            ? "max-h-[85vh] opacity-100"
+            : "max-h-0 opacity-0 pointer-events-none"
             }`}
         >
           <div className="flex flex-col p-5 space-y-1.5 overflow-y-auto max-h-[calc(85vh-3rem)]">
@@ -391,9 +391,6 @@ export default function Home() {
                 >
                   Quero me inscrever
                 </a>
-                <span className="text-sm text-gray-400">
-                  ou 12x de R$ 83,08
-                </span>
               </div>
             </Reveal>
           </div>
@@ -472,7 +469,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={200}>
               <p className="mt-5 text-lg sm:text-xl text-white/80 leading-relaxed">
-                É mais do que um curso on-line — nossas aulas serão ao vivo,
+                É mais do que um curso on-line, nossas aulas serão ao vivo,
                 queremos{" "}
                 <span className="font-bold text-yellow-300">
                   caminhar de perto contigo nessa jornada.
@@ -531,25 +528,24 @@ export default function Home() {
                   aula: "Encontro 1",
                   data: "25 de Novembro",
                   dia: "Quarta-feira",
-                  destaque: "Início da Mentoria",
                 },
                 {
                   aula: "Encontro 2",
                   data: "02 de Dezembro",
                   dia: "Quarta-feira",
-                  destaque: "Estratégia & Criação",
+
                 },
                 {
                   aula: "Encontro 3",
                   data: "09 de Dezembro",
                   dia: "Quarta-feira",
-                  destaque: "Tráfego & Métricas",
+
                 },
                 {
                   aula: "Encontro 4",
                   data: "16 de Dezembro",
                   dia: "Quarta-feira",
-                  destaque: "Prospecção & Prática",
+
                 },
               ].map((item, i) => (
                 <Reveal key={i} delay={i * 100}>
@@ -886,31 +882,27 @@ export default function Home() {
                 Sara Dias
               </h2>
               <p className="text-lg leading-relaxed text-gray-600">
-                Desde pequena, sempre teve envolvimento com arte — cantar, fazer
-                teatro, fotografar em aniversários. Sempre ouviu:{" "}
-                <span className="italic">
-                  "A Sara faz a foto sorrindo!"
-                </span>{" "}
-                como se estivesse dentro da foto. Isso era prazer pra ela.
+                Sara sempre teve uma forte conexão com a arte. Cantar, fazer teatro e fotografar aniversários estavam entre seus hobbies favoritos. Sempre ouvia:{" "}
+                <span className="italic">"A Sara faz a foto sorrindo!"</span>
+                , como se estivesse dentro da própria fotografia.
               </p>
               <p className="text-lg leading-relaxed text-gray-600">
-                O que ela não sabia é que, com o tempo, iria se encontrar em uma
-                profissão que uniria tudo isso. Hoje, ao editar um vídeo, se
-                pega sorrindo… coincidência?{" "}
-                <span className="font-semibold">Acho que não!</span>
+                E era exatamente isso: ela sentia prazer em registrar momentos e transmitir emoções através da imagem.
               </p>
               <p className="text-lg leading-relaxed text-gray-600">
-                A Sara é sócia-fundadora da Lion Comunicação Digital e atua como{" "}
+                O que Sara ainda não sabia é que, com o tempo, encontraria uma profissão capaz de unir tudo isso. Hoje, ao editar um vídeo, muitas vezes se pega sorrindo… Coincidência? Acho que não!
+              </p>
+              <p className="text-lg leading-relaxed text-gray-600">
+                Com{" "}
                 <span className="font-semibold text-[#b26a26]">
-                  Social Media há mais de 4 anos
+                  mais de seis anos de experiência como Social Media
                 </span>
-                , atendendo clientes de diversos segmentos e adquirindo
-                experiência não apenas em produção de conteúdo, mas também na
-                rotina real da profissão. Na mentoria, ela vai compartilhar tudo
-                o que aprendeu nesse período e mostrar o caminho pra tu te
-                tornar uma{" "}
+                , Sara já atendeu clientes de diversos segmentos e construiu uma trajetória que vai muito além da produção de conteúdo, envolvendo estratégia, relacionamento com clientes e os desafios da rotina real da profissão.
+              </p>
+              <p className="text-lg leading-relaxed text-gray-600">
+                Na mentoria, ela vai compartilhar os aprendizados dessa trajetória, mostrar os bastidores da profissão e te ensinar caminhos para construir tua carreira como{" "}
                 <span className="font-semibold text-[#b26a26]">
-                  Social Media de sucesso.
+                  Social Media com estratégia, confiança e profissionalismo.
                 </span>
               </p>
             </Reveal>
@@ -949,7 +941,7 @@ export default function Home() {
                 />
                 <FAQItem
                   question="Posso parcelar o investimento?"
-                  answer="Sim! Você pode parcelar em até 12x no cartão de crédito. O investimento total é de R$ 997,00 — menos de R$ 84 por mês para transformar a sua carreira."
+                  answer="Sim! Você pode parcelar em até 12x no cartão de crédito. O investimento total é de R$ 997,00, menos de R$ 84 por mês para transformar a sua carreira."
                 />
                 <FAQItem
                   question="Em quanto tempo consigo meus primeiros clientes?"
@@ -1080,12 +1072,12 @@ export default function Home() {
         {/* ─────────── FOOTER ─────────── */}
         <footer className="w-full bg-[#0d0704] text-white flex flex-col items-center justify-center gap-4 py-10 px-6 text-center">
           <p className="text-sm sm:text-base font-light text-white/60">
-            © {new Date().getFullYear()} Minha Jornada Social Media — Todos os
+            © {new Date().getFullYear()} Minha Jornada Social Media. Todos os
             direitos reservados.
           </p>
           <div className="flex items-center gap-3">
             <p className="text-sm font-light text-white/40">
-              Desenvolvido por — Lion Comunicação Digital
+              Desenvolvido por Lion Comunicação Digital
             </p>
           </div>
         </footer>
@@ -1103,7 +1095,7 @@ export default function Home() {
           target="_blank"
           className="block w-full text-center px-6 py-3.5 bg-[#b26a26] text-white font-bold rounded-full text-base shadow-md active:scale-95 transition-transform"
         >
-          Inscreva-se agora — 12x R$ 83,08
+          Inscreva-se agora | 12x R$ 83,08
         </a>
       </div>
     </div>

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Minha Jornada Social Media — Do zero à profissão",
+  title: "Minha Jornada Social Media: Do zero à profissão",
   description:
     "Mentoria on-line com 4 encontros 100% ao vivo para você se tornar Social Media profissional. Aprenda estratégias, prospecção de clientes e posicionamento digital com quem vive a profissão há mais de 4 anos.",
   icons: {
