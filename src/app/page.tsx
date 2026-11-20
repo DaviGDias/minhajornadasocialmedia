@@ -824,33 +824,26 @@ export default function Home() {
                 Ariane Braz
               </h2>
               <p className="text-lg leading-relaxed text-gray-600">
-                Desde pequena, Ariane sempre foi comunicativa e encontrou na
-                fala e na arte a sua forma mais genuína de se expressar. Pintava
-                telas, criava bijuterias para vender, comercializava produtos de
-                revistas… sempre descobrindo um jeito criativo de empreender.
-                Curiosamente, ela nasceu no Dia do Empreendedorismo Feminino,
-                como se já estivesse destinada a trilhar esse caminho de{" "}
-                <span className="font-semibold">inovação</span> e{" "}
-                <span className="font-semibold">liderança.</span>
+                Desde pequena, Ariane sempre foi comunicativa e encontrou na fala e na arte sua forma mais genuína de se expressar.
               </p>
               <p className="text-lg leading-relaxed text-gray-600">
-                Esse espírito inventivo e determinado a acompanha até hoje.
-                Atualmente, Ariane ajuda empresas e empreendedores a se
-                posicionarem de forma estratégica e assertiva nas redes sociais,
-                dominando a arte de comunicar com intenção através de textos,
-                artes e vídeos.{" "}
-                <span className="font-semibold text-[#b26a26]">
-                  Há 4 anos
-                </span>
-                , ela fundou a{" "}
-                <span className="font-semibold text-[#b26a26]">Socialize</span>{" "}
-                junto com seu marido, Gabriel, e desde então já contribuiu para
-                que{" "}
-                <span className="font-semibold text-[#b26a26]">
-                  dezenas de negócios
-                </span>{" "}
-                se destacassem online, transformando ideias em resultados
-                concretos.
+                Pintava telas, criava bijuterias para vender, comercializava produtos de revistas… sempre descobrindo um jeito criativo de empreender.
+              </p>
+              <p className="text-lg leading-relaxed text-gray-600">
+                Curiosamente, ela nasceu no Dia do Empreendedorismo Feminino, como se já estivesse destinada a trilhar esse caminho de{" "}
+                <span className="font-semibold">inovação e liderança.</span>
+              </p>
+              <p className="text-lg leading-relaxed text-gray-600">
+                Esse espírito inventivo e determinado a acompanha até hoje. Com{" "}
+                <span className="font-semibold text-[#b26a26]">seis anos de experiência como social media</span>
+                , Ariane ajuda empresas e empreendedores a se posicionarem de forma estratégica e assertiva nas redes sociais, dominando a arte de comunicar com intenção por meio de textos, artes e vídeos.
+              </p>
+              <p className="text-lg leading-relaxed text-gray-600">
+                Junto com seu marido, Gabriel, fundou a{" "}
+                <span className="font-semibold text-[#b26a26]">Socialize</span>
+                , empresa por meio da qual já contribuiu para que{" "}
+                <span className="font-semibold text-[#b26a26]">dezenas de negócios</span>{" "}
+                se destacassem no ambiente digital, transformando ideias em posicionamento, conexão e resultados concretos.
               </p>
             </Reveal>
             <Reveal
