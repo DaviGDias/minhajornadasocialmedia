@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { Menu, X, Calendar, BookOpen, Users, DollarSign, HelpCircle, Info } from "lucide-react";
 
 // ── Constants ───────────────────────────────────────────────
-const SYMPLA_URL = "https://www.sympla.com.br/evento/minha-jornada-social-media/3160774";
+const SYMPLA_URL = "https://www.sympla.com.br/evento-online/minha-jornada-social-media-do-zero-a-profissao/3662368";
 const TARGET_DATE = new Date("2026-11-24T23:59:59").getTime();
 
 // ── Scroll Reveal Hook ──────────────────────────────────────
