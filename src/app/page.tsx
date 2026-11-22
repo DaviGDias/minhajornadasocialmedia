@@ -279,7 +279,7 @@ export default function Home() {
                 href: "#investimento",
                 label: "Investimento & Vagas",
                 icon: DollarSign,
-                badge: "12x R$ 83",
+                badge: "12x de R$ 103,06",
               },
               { href: "#faq", label: "Perguntas Frequentes", icon: HelpCircle },
             ].map((item, idx) => {
@@ -1000,7 +1000,7 @@ export default function Home() {
                 <p className="text-white/70 text-lg">
                   ou em até{" "}
                   <span className="font-bold text-yellow-300">
-                    12x de R$ 83,08
+                    12x de R$ 103,06
                   </span>
                 </p>
 
@@ -1085,7 +1085,7 @@ export default function Home() {
           target="_blank"
           className="block w-full text-center px-6 py-3.5 bg-[#b26a26] text-white font-bold rounded-full text-base shadow-md active:scale-95 transition-transform"
         >
-          Inscreva-se agora | 12x R$ 83,08
+          Inscreva-se agora | 12x R$ 103,06
         </a>
       </div>
     </div>
